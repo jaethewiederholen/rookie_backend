@@ -1,0 +1,1 @@
+web: gunicorn rookie_backend.wsgi --log-file -
