@@ -10,4 +10,4 @@ class MusicSerializer(serializers.ModelSerializer):
     _location = LocationSerializer(source="location", read_only=True)
     class Meta:
         model = Music
-        fields = ['title','audio_file','_location']
+        fields = ['title', "artist", 'audio_file','_location']
