@@ -22,4 +22,4 @@ def get_music(request):
 @api_view(['GET'])
 def get_all_music(request):
     if request.method=="GET":
-        return Response(status=HTTP_200_OK, data=MusicSerializer(Music.objects.all(), many=True).data)
+        return Response(status=HTTP_200_OK, data={"music_list" : MusicSerializer(Music.objects.all(), many=True).data})
